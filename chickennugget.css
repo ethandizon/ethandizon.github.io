@@ -1,0 +1,16 @@
+body {
+        background-color: #1bf9f9
+}
+
+    a {
+        text-decoration: none;
+        color: #ed0000
+    }
+    
+li {   
+    color:orange;
+}
+
+div {
+    color:magenta;
+}
