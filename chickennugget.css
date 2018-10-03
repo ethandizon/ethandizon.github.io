@@ -54,7 +54,7 @@
 
      width: 100%;
 
-     background:#010072;
+     background:#ff00fa;
 
      color:#ffffff;
 
@@ -90,7 +90,7 @@
 
  header li{
 
-     float:left;
+     
 
      display:inline;
 
@@ -286,53 +286,3 @@
 
 }
 
-
-
-/*Container's Text*/
-
-#AP{
-
- font-size:100PX;
-
-      text-shadow:
-
-     -1px -1px 0 #000,
-
-     1px -1px 0 #000,
-
-    -1px 1px 0 #000,
-
-     1px 1px 0 #000;
-
-}
-
-
-
-#first{
-
- font-size: 50px;
-
- margin-top: 100px
-
-}
-
-
-
-#ever{
-
- color: #010072;
-
-}
-
-
-
-#whichshould{
-
- font-size: 70px
-
-}
-
-#gamer{
- padding-top: 15px;
- padding-left: 30px;
-}
