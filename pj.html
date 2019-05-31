@@ -1,0 +1,111 @@
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Processing Final Project</title>
+<script type="text/javascript" src="jk.js"></script>
+</head>
+<body>
+<script type="text/processing">
+
+/** Final Computer Science Project
+*By:Ethan Dizon
+*Period 2
+*NOTES:
+*Clicker game, counts the amount of clicks in certain amount of time
+*add gameState so there is an end to the game when time is up, gmaeState to restart game
+*add gameState for a start screen
+*/
+int x;
+int Vy;
+PImage fast;
+int highScore;
+int score;
+int gameState;
+float y=0;
+
+void setup(){
+ size (800,800);
+ fast=loadImage("./img/fast.png");
+}
+
+void draw(){
+  background(0);
+  fill(random(200),random(255),random(255));
+  textSize(15);
+   text("Ethan",5,775);
+   textSize(25);
+   text("Dizon",5,800);
+   fill(255);
+   textSize(15);
+   text("Score = "+score,690,25);
+   text("High Score = "+highScore,650, 50);
+   
+   if (gameState==0){          //Start Screen of Game
+      fill(25,3,255);
+   if (mouseX > 200 && mouseX < 600 && mouseY > 300 && mouseY < 400){
+    fill(255,55,0);
+    if(mousePressed==true){
+    gameState = 1;
+    }
+   }
+  
+   rect(200, 300, 400, 100, 20);
+  fill(255);
+  textSize(40);
+  text("Click To Start",275,370); 
+  stroke(4);
+ 
+  
+   }
+   //end of gameState 0
+   
+   if (gameState==1){                //Main Part of Game
+    makeButton();
+    image(fast,x, 650);
+    x=x+10;
+    
+    
+  
+      if (mouseX > 140 && mouseX < 640 && mouseY > 140 && mouseY < 640){
+    if(mousePressed==true){
+      score++;
+      highScore++;
+      
+    }
+     }
+   }
+   
+   
+   checkImage();
+}
+ 
+   void checkImage() {
+  if (x<-fast.width) {
+    x=0;
+  }
+}
+   
+void makeButton(){
+  
+   //button
+   fill(25,3,255);
+   if (mouseX > 140 && mouseX < 640 && mouseY > 140 && mouseY < 640){
+    fill(255,55,0);
+   }
+   rect(140, 140, 500, 500, 20);
+  fill(255);
+  textSize(40);
+  text("Click",350, 400); 
+  stroke(4);
+  
+}
+//fill(random(255),random(255),random(255));
+
+
+</script>
+<canvas id="sketch" style="border: 1px solid black;"></canvas>
+</body>
+</html>
+
