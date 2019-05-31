@@ -64,8 +64,11 @@ void draw(){
    if (gameState==1){                //Main Part of Game
     makeButton();
     image(fast,x, 650);
-    x=x+10;
+    x+=10;
+    if(x>800){
+    x = -150;
     
+    }
     
   
       if (mouseX > 140 && mouseX < 640 && mouseY > 140 && mouseY < 640){
