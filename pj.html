@@ -19,6 +19,7 @@
 */
 int x;
 int Vy;
+int s = 1;
 PImage fast;
 int highScore;
 int score;
@@ -40,7 +41,7 @@ void draw(){
    fill(255);
    textSize(15);
    text("Score = "+score,690,25);
-   text("High Score = "+highScore,650, 50);
+  
    
    if (gameState==0){          //Start Screen of Game
       fill(25,3,255);
@@ -72,9 +73,9 @@ void draw(){
     
   
       if (mouseX > 140 && mouseX < 640 && mouseY > 140 && mouseY < 640){
-    if(mousePressed==true){
-      score++;
-      highScore++;
+    if(mousePressed && (mouseButton == LEFT)){
+      score= score + s;
+      
       
     }
      }
